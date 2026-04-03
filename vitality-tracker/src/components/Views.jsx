@@ -13,7 +13,7 @@ const iconMap = {
 
 export const DashboardView = () => {
   const { habits, logHabit, getTodayProgress, getTodayValue } = useHabits();
-  const { isFasting, getFormattedTime, getTimeRemaining, getFastingProgress } = useFastingTimer();
+  const { isFasting, getFormattedTime } = useFastingTimer();
   const { foodsToAvoid, isAvoidedToday, getAvoidanceScore } = useFoodAvoidance();
 
   const totalHabitsCompleted = habits.filter(h => getTodayProgress(h.id) >= 1).length;
