@@ -1,0 +1,280 @@
+/* Vitality Design System - Color Tokens */
+:root {
+  /* Primary - Deep Forest Green */
+  --md-sys-color-primary: #012d1d;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #1b4332;
+  --md-sys-color-on-primary-container: #c1ecd4;
+  --md-sys-color-primary-fixed: #c1ecd4;
+  --md-sys-color-primary-fixed-dim: #9dddbb;
+  
+  /* Secondary - Sage Green */
+  --md-sys-color-secondary: #4a6741;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #c8eebb;
+  --md-sys-color-on-secondary-container: #0a2105;
+  
+  /* Tertiary - Warm Earth (for alerts, heart rate) */
+  --md-sys-color-tertiary: #3f1d00;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #ffb780;
+  --md-sys-color-on-tertiary-container: #2b1200;
+  --md-sys-color-tertiary-fixed-dim: #ffb780;
+  
+  /* Error */
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+  
+  /* Surface Hierarchy - Warm Sand Base */
+  --md-sys-color-surface: #f9faf2;
+  --md-sys-color-on-surface: #1a1c18;
+  --md-sys-color-on-surface-variant: #414844;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f3f4ec;
+  --md-sys-color-surface-container: #edece4;
+  --md-sys-color-surface-container-high: #e8e9e1;
+  --md-sys-color-surface-container-highest: #e2e3db;
+  
+  /* Outline & Borders */
+  --md-sys-color-outline: #707973;
+  --md-sys-color-outline-variant: #c1c8c2;
+  
+  /* Shadows */
+  --md-sys-color-shadow: rgba(26, 28, 24, 0.06);
+  
+  /* Typography */
+  --md-sys-typescale-display-lg: 3.5rem;
+  --md-sys-typescale-display-sm: 2rem;
+  --md-sys-typescale-headline-lg: 2rem;
+  --md-sys-typescale-title-lg: 1.25rem;
+  --md-sys-typescale-body-lg: 1rem;
+  --md-sys-typescale-label-md: 0.875rem;
+  
+  /* Spacing */
+  --md-sys-spacing-4: 1rem;
+  --md-sys-spacing-6: 2rem;
+  --md-sys-spacing-8: 2.5rem;
+  --md-sys-spacing-12: 4rem;
+  --md-sys-spacing-16: 5.5rem;
+  
+  /* Border Radius */
+  --md-sys-radius-md: 0.75rem;
+  --md-sys-radius-xl: 1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Utility Classes */
+.surface-base {
+  background-color: var(--md-sys-color-surface);
+}
+
+.surface-container {
+  background-color: var(--md-sys-color-surface-container-low);
+}
+
+.surface-card {
+  background-color: var(--md-sys-color-surface-container-lowest);
+  border-radius: var(--md-sys-radius-xl);
+  box-shadow: 0 8px 24px var(--md-sys-color-shadow);
+}
+
+.glass-effect {
+  background-color: rgba(249, 250, 242, 0.8);
+  backdrop-filter: blur(24px);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--md-sys-color-primary) 0%, var(--md-sys-color-primary-container) 100%);
+  color: var(--md-sys-color-on-primary);
+  border: none;
+  border-radius: var(--md-sys-radius-xl);
+  padding: 0.875rem 1.5rem;
+  font-size: var(--md-sys-typescale-body-lg);
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(1, 45, 29, 0.2);
+}
+
+.btn-secondary {
+  background-color: var(--md-sys-color-surface-container-highest);
+  color: var(--md-sys-color-on-surface);
+  border: none;
+  border-radius: var(--md-sys-radius-xl);
+  padding: 0.875rem 1.5rem;
+  font-size: var(--md-sys-typescale-body-lg);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--md-sys-color-surface-container-high);
+}
+
+/* Input Styles */
+.input-field {
+  background-color: var(--md-sys-color-surface-container-low);
+  border: none;
+  border-radius: var(--md-sys-radius-xl);
+  padding: 1rem 1.25rem;
+  font-size: var(--md-sys-typescale-body-lg);
+  color: var(--md-sys-color-on-surface);
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  background-color: var(--md-sys-color-surface-container-lowest);
+  box-shadow: 0 0 0 1px rgba(193, 200, 194, 0.15);
+}
+
+/* Chip Styles */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--md-sys-radius-xl);
+  font-size: var(--md-sys-typescale-label-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.chip-active {
+  background-color: var(--md-sys-color-primary-fixed);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.chip-inactive {
+  background-color: var(--md-sys-color-surface-container-highest);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Progress Ring */
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.5s ease;
+  stroke-linecap: round;
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--md-sys-color-surface-container-lowest);
+  border-radius: var(--md-sys-radius-xl);
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px var(--md-sys-color-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(26, 28, 24, 0.1);
+}
+
+/* Section Styles */
+.section {
+  background-color: var(--md-sys-color-surface-container-low);
+  border-radius: var(--md-sys-radius-xl);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Text Variants */
+.text-display-lg {
+  font-size: var(--md-sys-typescale-display-lg);
+  font-family: 'Manrope', sans-serif;
+}
+
+.text-display-sm {
+  font-size: var(--md-sys-typescale-display-sm);
+  font-family: 'Manrope', sans-serif;
+}
+
+.text-headline {
+  font-size: var(--md-sys-typescale-headline-lg);
+  font-family: 'Manrope', sans-serif;
+}
+
+.text-title {
+  font-size: var(--md-sys-typescale-title-lg);
+  font-weight: 600;
+}
+
+.text-body {
+  font-size: var(--md-sys-typescale-body-lg);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.text-label {
+  font-size: var(--md-sys-typescale-label-md);
+  font-weight: 500;
+}
+
+/* Layout Utilities */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gap-4 {
+  gap: var(--md-sys-spacing-4);
+}
+
+.gap-6 {
+  gap: var(--md-sys-spacing-6);
+}
+
+.p-4 {
+  padding: var(--md-sys-spacing-4);
+}
+
+.p-6 {
+  padding: var(--md-sys-spacing-6);
+}
+
+.m-4 {
+  margin: var(--md-sys-spacing-4);
+}
+
+.m-6 {
+  margin: var(--md-sys-spacing-6);
+}
